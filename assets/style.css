@@ -47,6 +47,8 @@ hr {
 }
 
 .header.fixed {
+    padding: 10px 0;
+
     background-color: #eb8b8d;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
@@ -624,13 +626,17 @@ hr {
 
 
 .rewiews {
-    padding: 0 110px;
     position: relative;
+}
+
+.rewiews .slick-slider {
+    padding: 0 110px;
 }
 
 .rewiews__item {
     padding-left: 255px;
     position: relative;
+    min-height: 210px;
 }
 
 .rewiews__photo {
@@ -673,17 +679,25 @@ hr {
     background-color: #f38181;
 }
 
-.rewiews__btn {
+.slick-arrow {
     position: absolute;
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
 
+    border: 0;
+    background: none;
+    cursor: pointer;
+
     font-size: 0;
     color: transparent;
 }
 
-.rewiews__btn::after {
+.slick-arrow:focus {
+     outline: 0;
+}
+
+.slick-arrow::after {
     content: "";
     display: block;
     height: 16px;
@@ -693,12 +707,12 @@ hr {
     border-left: 2px solid #ccc;
 }
 
-.rewiews__btn--prev {
+.slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
 
-.rewiews__btn--next {
+.slick-next {
     right: 0;
     transform: rotate(135deg);
 }
@@ -1303,7 +1317,7 @@ hr {
     }
 
     /* Reviews */
-    .rewiews {
+    .rewiews .slick-slider {
         padding: 0 60px;
     }
 
@@ -1378,6 +1392,10 @@ hr {
        background-color: #eb8b8d;
     }
 
+    .header__nav.active {
+        display: block;
+    }
+
     .nav__link {
         display: block;
         margin: 0;
@@ -1386,6 +1404,10 @@ hr {
 
     .nav-toggle {
         display: block;
+    }
+
+    .nav-toggle:focus {
+        outline: 0;
     }
 
     /* section */
@@ -1546,11 +1568,11 @@ hr {
    }
 
    /* Reviews */
-   .rewiews {
+   .rewiews .slick-slider {
        padding: 0;
    }
 
-   .rewiews__btn {
+   .slick-arrow {
        top: 18%;
    }
 
